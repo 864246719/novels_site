@@ -1,0 +1,29 @@
+#ranking_box {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  border: 1px solid var(--secondary-color);
+}
+#ranking_box ul {
+  display: flex;
+  margin: 0;
+}
+
+#ranking_box ul li {
+  margin-left: 20px;
+}
+
+#ranking_box ul li a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+#ranking_box ul li a:hover {
+  background-color: var(--third-color);
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.activeRank {
+  background-color: var(--third-color);
+  color: var(--light-color) !important;
+  pointer-events: none;
+}

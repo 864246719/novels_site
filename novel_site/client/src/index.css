@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #00334e;
+  --secondary-color: #145374;
+  --third-color: #5588a3;
+  --light-color: #e8e8e8;
+}
+
+.link {
+  color: var(--primary-color);
+}
+
+.link:hover {
+  color: var(--third-color);
+}
+
+@media only screen and (max-width: 545px) {
+}

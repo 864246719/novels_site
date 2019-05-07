@@ -1,0 +1,85 @@
+小说资源采集的【表规范】
+
+
+1.所有小说名【表】
+novel_name_table
+{
+    novel_id:           MEDIUMINT
+    novel_name:         VARCHAR(255)
+    novel_name_pinyin:  VARCHAR(255)
+    novel_author:       VARCHAR(255)
+    novel_genre:        MEDIUMINT
+    novel_link: 
+    novel_status: 
+    novel_lastUpdate:                                DATE
+
+    novel_synopsis:                                     TEXT(65535)
+    novel_cover_img_link:
+    
+    novel_views_perday:                                 INT
+    novel_views_perweek:                                INT
+    novel_views_permonth:                               INT
+    novel_views_total:                                  INT
+}
+
+注释：
+1.novel_genre
+玄幻小说 -- 1
+修真小说 -- 2
+都市小说 -- 3
+穿越小说 -- 4
+网游小说 -- 5
+科幻小说 -- 6
+2.novel_status
+0 -- 连载
+1 -- 完结
+
+2.小说封面图表
+table命名格式：cover_imgs
+{
+    novel_id:                                       MEDIUMINT
+    img_content:                                    MEDIUMBLOB
+
+}
+
+3.单个小说目录【表】
+novel_category_table
+文件名： novel_id  + .json
+table命名格式： catalog_[novel_id]
+{
+    novel_id:
+    novel_chapter_id: novel_id +10001起头            BIGINT
+    novel_chapter_name:                             VARCHAR(255)
+    //novel_chapter_volume:                           VARCHAR(255)
+    novel_chapter_link:
+}
+
+4.单个小说章节内容【表】
+table命名格式： chapters_[novel_id]
+{
+    novel_id:继承                                   MEDIUMINT
+    novel_chapter_id:继承                           BIGINT
+    novel_chapter_name:继承                         VARCHAR(255)
+    novel_chapter_volume:继承                       VARCHAR(255)
+    novel_chapter_content:                          TEXT(65535)
+}
+已经下载完成第100208本小说
+
+
+
+================================网站模板页
+-----------------------------主页：
+奇幻、玄幻        周点击榜单
+武侠、仙侠、修真   周点击榜单
+历史、军事、穿越   周点击榜单
+言情、都市        周点击榜单
+游戏、竞技、网游   周点击榜单
+异灵、科幻        周点击榜单
+日点击排行榜单
+周点击排行榜单
+月点击排行榜单
+
+
+目录页
+章节内容页
+搜索页

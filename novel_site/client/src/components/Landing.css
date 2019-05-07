@@ -1,0 +1,104 @@
+.novel-hotcard {
+  width: 368px;
+  height: 330px;
+  font-size: 12px;
+  border-right: 1px dashed var(--primary-color);
+  border-bottom: 3px solid white;
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  font-weight: 800;
+}
+.novel-hotcard ul li span {
+  color: var(--primary-color);
+}
+
+.novel-hotcard h2 {
+  font-size: 14px;
+  border-bottom: 1px solid var(--primary-color);
+  margin: 5px;
+  padding: 3px 10px;
+}
+
+.novel-brief {
+  display: flex;
+  margin: 0 10px;
+  height: 86px;
+}
+.novel-brief img {
+  max-width: 71px;
+  height: 86px;
+  border: solid 1px #ddd;
+  padding: 1px;
+  background-color: white;
+}
+
+.novel-brief-text {
+  margin-left: 10px;
+}
+
+.novel-brief-text p {
+  margin-bottom: 10px;
+}
+
+.novel-hotcard ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  grid-template-rows: repeat(auto-fill, 37px);
+  justify-items: start;
+  justify-content: space-between;
+  grid-row-gap: 3px;
+  padding: 5px 0 5px 5px;
+}
+.novel-hotcard ul li {
+  border-bottom: 1px dashed var(--primary-color);
+}
+.novel-hotcard ul li a {
+  font-size: 13px;
+}
+a {
+  color: var(--third-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.hotcard-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 3px solid var(--primary-color);
+  margin-top: 20px;
+}
+
+/* 由于bootstrap在低层覆盖了部分从顶层设置而来的css，所以此处为从更底层覆盖bootstrap的设置 */
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", "宋体";
+  background-color: var(--light-color);
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 545px) {
+  .novel-hotcard {
+    height: auto;
+  }
+
+  .novel-hotcard ul {
+    margin-left: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    justify-content: space-between;
+  }
+
+  .novel-hotcard ul li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .novel-hotcard ul li span {
+    margin-right: 10px;
+  }
+}

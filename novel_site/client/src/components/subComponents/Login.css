@@ -1,0 +1,91 @@
+.cancel {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  color: var(--light-color);
+}
+
+.cancel:hover {
+  color: var(--primary-color);
+}
+
+.cancel:active {
+  color: black;
+}
+
+.box {
+  width: 300px;
+  position: fixed;
+  padding: 40px;
+
+  /* 保证居中 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--third-color);
+  text-align: center;
+  z-index: 2;
+  border-radius: 10px;
+  border: 5px solid var(--secondary-color);
+}
+
+.box h1 {
+  color: var(--light-color);
+  font-weight: 500;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  border: 0;
+  background: none;
+  display: inline-block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: var(--light-color);
+
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  width: 220px;
+  border-color: var(--primary-color);
+}
+
+.btn-group {
+  display: flex;
+}
+
+.box input[type="submit"],
+.box input[type="button"] {
+  border: 0;
+  background: none;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  padding: 14px 30px;
+  outline: none;
+  color: var(--light-color);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type="submit"]:hover,
+.box input[type="button"]:hover {
+  background: var(--primary-color);
+}
+
+.box p {
+  color: var(--light-color);
+  position: absolute;
+  left: 30%;
+}

@@ -1,0 +1,10 @@
+node_modules
+web_app
+
+build
+novel_sources/*/
+novel_sources/novels.json
+dev.js
+dgocean
+credential.json
+token.json
